@@ -1,0 +1,162 @@
+/* Основные стили для страницы Steam Deck */
+body {
+    background-color: #000000; /* Черный фон */
+    color: #ffffff; /* Белый текст */
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+}
+
+/* Шапка */
+header {
+    background-color: #1f1f1f; /* Темно-серый фон */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+}
+
+/* Навигация */
+nav {
+    background-color: #0d0d0d; /* Очень темный фон */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+}
+
+nav ul li {
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ffffff; /* Белый текст */
+    text-decoration: none;
+    padding: 15px 20px;
+    display: block;
+    font-size: 16px;
+    border-radius: 5px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+nav ul li a:hover {
+    background-color: #0078ff; /* Синий при наведении */
+    transform: scale(1.05); /* Небольшое увеличение */
+}
+
+/* Активная ссылка */
+nav ul li a.active {
+    background-color: #0078ff; /* Синий для активной */
+}
+
+/* Контент */
+main {
+    padding: 20px;
+    line-height: 1.6;
+}
+
+h1, h2 {
+    color: #0078ff; /* Синий для заголовков */
+}
+
+img {
+    max-width: 100%;
+    border-radius: 10px;
+    margin-top: 20px;
+}
+
+/* Таблица */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table th, table td {
+    border: 1px solid #333333;
+    padding: 10px;
+    text-align: center;
+    color: #ffffff;
+}
+
+table th {
+    background-color: #1f1f1f; /* Темно-серый */
+    color: #0078ff; /* Синий текст */
+}
+
+table tr:nth-child(even) {
+    background-color: #121212;
+}
+
+table tr:hover {
+    background-color: #0078ff; /* Подсветка строки при наведении */
+    color: #ffffff;
+}
+/* Стили для изображений */
+img {
+    max-width: 100%; /* Изображение не выходит за пределы контейнера */
+    max-height: 300px; /* Ограничение высоты */
+    object-fit: cover; /* Сохранение пропорций */
+    border-radius: 10px; /* Скругленные края для эстетики */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для акцента */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
+
+/* Стиль кнопки "Наверх" */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #2600ff, #0011ff);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Эффект при наведении */
+.back-to-top:hover {
+    background: linear-gradient(45deg, #0252ff, #0307ff);
+    transform: scale(1.1); /* Легкое увеличение */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Анимация появления кнопки */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация исчезновения кнопки */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}

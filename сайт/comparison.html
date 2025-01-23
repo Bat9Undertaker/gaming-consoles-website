@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица сравнения</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <h1>Таблица сравнения</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Главная</a></li>
+
+            </ul>
+        </nav>
+    </header>
+    <main>
+        <!-- Поле поиска -->
+        <div style="text-align: center; margin: 20px;">
+            <input
+            type="text" oninput="funcSort(this.value)" placeholder="Введите текст"
+                style="padding: 10px; width: 80%; font-size: 1rem; border-radius: 5px; border: 1px solid #ccc;"
+            />
+        </div>
+        <table class="comparison-table">
+            <thead>
+                <tr>
+                    <th>Модель</th>
+                    <th>Процессор</th>
+                    <th>Графика</th>
+                    <th>Память</th>
+                    <th>Хранилище</th>
+                    <th>4K Поддержка</th>
+                    <th>Эксклюзивные игры</th>
+                    <th>Цена</th>
+                </tr>
+            </thead>
+            <tbody id="table">
+                
+                
+            </tbody>
+        </table>
+        </main>
+        <script src="./comparison.js"></script>
+        </body>
+</html>
+
+<!--
+<tr>
+                    <td>PlayStation 5</td>
+                    <td>AMD Zen 2, 3.5 GHz</td>
+                    <td>AMD RDNA 2, 10.28 TFLOPS</td>
+                    <td>16 GB GDDR6</td>
+                    <td>825 GB SSD</td>
+                    <td>Да</td>
+                    <td>Spider-Man, Ratchet & Clank</td>
+                    <td>49 990 ₽</td>
+                </tr>
+                <tr>
+                    <td>PlayStation 4 Pro</td>
+                    <td>AMD Jaguar, 2.13 GHz</td>
+                    <td>AMD Radeon, 4.2 TFLOPS</td>
+                    <td>8 GB GDDR5</td>
+                    <td>1 TB HDD</td>
+                    <td>Да</td>
+                    <td>Horizon Zero Dawn, The Last of Us</td>
+                    <td>34 990 ₽</td>
+                </tr>
+                <tr>
+                    <td>PlayStation 3</td>
+                    <td>Cell Broadband Engine, 3.2 GHz</td>
+                    <td>NVIDIA RSX</td>
+                    <td>256 MB XDR</td>
+                    <td>20–320 GB HDD</td>
+                    <td>Нет</td>
+                    <td>Uncharted, LittleBigPlanet</td>
+                    <td>14 990 ₽</td>
+                </tr>
+        
+
+                <tr>
+                    <td>Xbox Series X</td>
+                    <td>AMD Zen 2, 3.8 GHz</td>
+                    <td>AMD RDNA 2, 12 TFLOPS</td>
+                    <td>16 GB GDDR6</td>
+                    <td>1 TB SSD</td>
+                    <td>Да</td>
+                    <td>Halo Infinite, Forza Horizon 5</td>
+                    <td>49 990 ₽</td>
+                </tr>
+                <tr>
+                    <td>Xbox Series S</td>
+                    <td>AMD Zen 2, 3.6 GHz</td>
+                    <td>AMD RDNA 2, 4 TFLOPS</td>
+                    <td>10 GB GDDR6</td>
+                    <td>512 GB SSD</td>
+                    <td>Нет</td>
+                    <td>Gears 5, Sea of Thieves</td>
+                    <td>29 990 ₽</td>
+                </tr>
+                <tr>
+                    <td>Xbox One X</td>
+                    <td>AMD Jaguar, 2.3 GHz</td>
+                    <td>AMD Radeon, 6 TFLOPS</td>
+                    <td>12 GB GDDR5</td>
+                    <td>1 TB HDD</td>
+                    <td>Да</td>
+                    <td>Forza Motorsport 7, Cuphead</td>
+                    <td>35 990 ₽</td>
+                </tr>
+        
+
+                <tr>
+                    <td>Steam Deck (512 ГБ)</td>
+                    <td>AMD Zen 2, 3.5 GHz</td>
+                    <td>AMD RDNA 2</td>
+                    <td>16 GB LPDDR5</td>
+                    <td>512 GB SSD</td>
+                    <td>Нет</td>
+                    <td>Все игры Steam</td>
+                    <td>51 990 ₽</td>
+                </tr>
+                <tr>
+                    <td>Steam Deck (256 ГБ)</td>
+                    <td>AMD Zen 2, 3.5 GHz</td>
+                    <td>AMD RDNA 2</td>
+                    <td>16 GB LPDDR5</td>
+                    <td>256 GB SSD</td>
+                    <td>Нет</td>
+                    <td>Все игры Steam</td>
+                    <td>42 990 ₽</td>
+                </tr>
+                <tr>
+                    <td>Steam Deck (64 ГБ)</td>
+                    <td>AMD Zen 2, 3.5 GHz</td>
+                    <td>AMD RDNA 2</td>
+                    <td>16 GB LPDDR5</td>
+                    <td>64 GB eMMC</td>
+                    <td>Нет</td>
+                    <td>Все игры Steam</td>
+                    <td>34 990 ₽</td>
+                </tr>
+        
+
+                <tr>
+                    <td>Nintendo Switch</td>
+                    <td>NVIDIA Tegra X1</td>
+                    <td>1 TFLOP</td>
+                    <td>4 GB LPDDR4</td>
+                    <td>32 GB eMMC</td>
+                    <td>Нет</td>
+                    <td>Breath of the Wild, Mario Odyssey</td>
+                    <td>23 990 ₽</td>
+                </tr>
+                <tr>
+                    <td>Nintendo Switch Lite</td>
+                    <td>NVIDIA Tegra X1</td>
+                    <td>1 TFLOP</td>
+                    <td>4 GB LPDDR4</td>
+                    <td>32 GB eMMC</td>
+                    <td>Нет</td>
+                    <td>Pokémon Sword, Splatoon 2</td>
+                    <td>17 990 ₽</td>
+                </tr>
+                <tr>
+                    <td>Nintendo 3DS</td>
+                    <td>ARM11 Dual-Core</td>
+                    <td>4 MB VRAM</td>
+                    <td>128 MB FCRAM</td>
+                    <td>2–32 GB SD Card</td>
+                    <td>Нет</td>
+                    <td>Animal Crossing, Fire Emblem</td>
+        <td>12 990 ₽</td>
+                </tr>
+-->
+
