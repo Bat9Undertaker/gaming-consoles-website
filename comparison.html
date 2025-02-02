@@ -1,0 +1,263 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./public/icon.png" type="image/x-icon">
+    <title>Сравнение игровых консолей</title>
+    <style>
+        :root {
+            --main-color: #FF6B00;
+            --bg-color: #0A0A0A;
+            --text-color: #FFFFFF;
+            --section-bg: #1E1E1E;
+            --accent-gray: #3A3A3A;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 20px;
+            background: var(--bg-color);
+            color: var(--text-color);
+        }
+        /* Навигация */
+        .nav {
+            margin-bottom: 30px;
+        }
+        .nav a {
+            color: var(--main-orange);
+            text-decoration: none;
+            font-size: 18px;
+            padding: 10px 20px;
+            border: 2px solid var(--main-orange);
+            border-radius: 25px;
+            transition: all 0.3s;
+        }
+        .nav a:hover {
+            background: var(--main-orange);
+            color: var(--dark-bg);
+        }
+        .search-box {
+            max-width: 800px;
+            margin: 40px auto;
+            position: relative;
+        }
+
+        #searchInput {
+            width: 100%;
+            padding: 18px 30px;
+            font-size: 20px;
+            border: 3px solid var(--main-color);
+            border-radius: 40px;
+            background: var(--section-bg);
+            color: var(--text-color);
+            outline: none;
+            transition: all 0.3s;
+        }
+
+        #searchInput:focus {
+            box-shadow: 0 0 25px rgba(255, 107, 0, 0.4);
+        }
+
+        .table-container {
+            background: var(--section-bg);
+            border-radius: 15px;
+            padding: 20px;
+            margin: 20px auto;
+            max-width: 1400px;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            table-layout: fixed;
+        }
+
+        th, td {
+            padding: 18px;
+            text-align: left;
+            border-bottom: 2px solid var(--accent-gray);
+            word-wrap: break-word;
+        }
+
+        th {
+            background: linear-gradient(45deg, var(--main-color), #FF8E00);
+            color: #FFF;
+            position: sticky;
+            top: 0;
+            font-weight: bold;
+            font-size: 18px;
+        }
+
+        .platform-header {
+            background: var(--accent-gray);
+            font-size: 1.3em;
+            color: var(--main-color);
+            font-weight: bold;
+        }
+
+        .highlight {
+            background: #332100 !important;
+            position: relative;
+            order: -1;
+        }
+
+        .highlight::after {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            box-shadow: 0 0 25px rgba(255, 107, 0, 0.3);
+            pointer-events: none;
+        }
+        
+
+        @media (max-width: 768px) {
+            .table-container {
+                padding: 10px;
+            }
+            
+            th, td {
+                padding: 12px;
+                font-size: 14px;
+            }
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="nav">
+        <a href="index.html">← На главную</a>
+    </div>
+    <div class="search-box">
+        <input type="text" id="searchInput" placeholder="Введите модель для сравнения..." autocomplete="off">
+    </div>
+
+    <div class="table-container">
+        <table id="mainTable">
+            <thead>
+                <tr>
+                    <th>Модель</th>
+                    <th>Год</th>
+                    <th>Процес-сор</th>
+                    <th>Графика</th>
+                    <th>ОЗУ</th>
+                    <th>Память</th>
+                    <th>Разреше-ние</th>
+                    <th>HDR</th>
+                    <th>Совмест-имость</th>
+                    <th>Особен-ности</th>
+                    <th>Цена</th>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- PlayStation -->
+                <tr class="platform-header"><td colspan="11">PlayStation</td></tr>
+                <tr><td>PS1</td><td>1994</td><td>33.9 MHz R3000</td><td>1 MB VRAM</td><td>2 MB</td><td>Карта памяти</td><td>640×480</td><td>Нет</td><td>Нет</td><td>CD-ROM</td><td>26 910 ₽</td></tr>
+                <tr><td>PS2</td><td>2000</td><td>294 MHz Emotion Engine</td><td>GS Graphics</td><td>32 MB</td><td>HDD (опц.)</td><td>1280×1024</td><td>Нет</td><td>PS1</td><td>DVD-плеер</td><td>26 910 ₽</td></tr>
+                <tr><td>PS3</td><td>2006</td><td>3.2 GHz Cell</td><td>RSX 550 MHz</td><td>256 MB</td><td>20-500 GB</td><td>1080p</td><td>Нет</td><td>PS1/PS2</td><td>Blu-ray</td><td>44 910 ₽</td></tr>
+                <tr><td>PS4</td><td>2013</td><td>Jaguar 8-core</td><td>1.84 TFLOPS</td><td>8 GB</td><td>500 GB</td><td>1080p</td><td>Да (Pro)</td><td>Нет</td><td>Share Play</td><td>35 910 ₽</td></tr>
+                <tr><td>PS4 Pro</td><td>2016</td><td>Jaguar 8-core</td><td>4.2 TFLOPS</td><td>8 GB</td><td>1 TB</td><td>4K</td><td>Да</td><td>PS4</td><td>Boost Mode</td><td>35 910 ₽</td></tr>
+                <tr><td>PS5</td><td>2020</td><td>AMD Zen 2 3.5 GHz</td><td>10.3 TFLOPS</td><td>16 GB</td><td>825 GB SSD</td><td>8K</td><td>Да</td><td>PS4</td><td>Ray Tracing</td><td>44 910 ₽</td></tr>
+
+                <!-- Xbox -->
+                <tr class="platform-header"><td colspan="11">Xbox</td></tr>
+                <tr><td>Xbox Original</td><td>2001</td><td>733 MHz Pentium III</td><td>233 MHz NV2A</td><td>64 MB</td><td>8-10 GB</td><td>1080i</td><td>Нет</td><td>Нет</td><td>Первый Xbox</td><td>26 910 ₽</td></tr>
+                <tr><td>Xbox 360</td><td>2005</td><td>3.2 GHz PowerPC</td><td>500 MHz Xenos</td><td>512 MB</td><td>20-250 GB</td><td>1080p</td><td>Нет</td><td>Original Xbox</td><td>Kinect</td><td>26 910 ₽</td></tr>
+                <tr><td>Xbox One</td><td>2013</td><td>Jaguar 8-core</td><td>1.31 TFLOPS</td><td>8 GB</td><td>500 GB</td><td>1080p</td><td>Да</td><td>Xbox 360</td><td>HDMI In</td><td>44 910 ₽</td></tr>
+                <tr><td>Xbox One S</td><td>2016</td><td>Jaguar 8-core</td><td>1.4 TFLOPS</td><td>8 GB</td><td>1-2 TB</td><td>4K</td><td>Да</td><td>Xbox 360</td><td>HDR поддержка</td><td>26 910 ₽</td></tr>
+                <tr><td>Xbox One X</td><td>2017</td><td>Jaguar 8-core</td><td>6 TFLOPS</td><td>12 GB</td><td>1 TB</td><td>4K</td><td>Да</td><td>Xbox 360</td><td>True 4K</td><td>44 910 ₽</td></tr>
+                <tr><td>Series S</td><td>2020</td><td>Zen 2 3.6 GHz</td><td>4 TFLOPS</td><td>10 GB</td><td>512 GB SSD</td><td>1440p</td><td>Да</td><td>Все Xbox</td><td>Digital Only</td><td>26 910 ₽</td></tr>
+                <tr><td>Series X</td><td>2020</td><td>Zen 2 3.8 GHz</td><td>12 TFLOPS</td><td>16 GB</td><td>1 TB SSD</td><td>8K</td><td>Да</td><td>Все Xbox</td><td>Quick Resume</td><td>44 910 ₽</td></tr>
+
+                <!-- Steam Deck -->
+                <tr class="platform-header"><td colspan="11">Steam Deck</td></tr>
+                <tr><td>64 GB</td><td>2022</td><td>Zen 2 4c/8t</td><td>1.6 TFLOPS</td><td>16 GB</td><td>64 GB</td><td>1280×800</td><td>Да</td><td>PC</td><td>Портативная</td><td>35 910 ₽</td></tr>
+                <tr><td>256 GB</td><td>2022</td><td>Zen 2 4c/8t</td><td>1.6 TFLOPS</td><td>16 GB</td><td>256 GB</td><td>1280×800</td><td>Да</td><td>PC</td><td>Быстрый SSD</td><td>47 610 ₽</td></tr>
+                <tr><td>512 GB</td><td>2022</td><td>Zen 2 4c/8t</td><td>1.6 TFLOPS</td><td>16 GB</td><td>512 GB</td><td>1280×800</td><td>Да</td><td>PC</td><td>Anti-glare</td><td>58 410 ₽</td></tr>
+
+                <!-- Nintendo -->
+                <tr class="platform-header"><td colspan="11">Nintendo</td></tr>
+                <tr><td>Switch</td><td>2017</td><td>4x Cortex-A57</td><td>256 CUDA</td><td>4 GB</td><td>32 GB</td><td>1080p</td><td>Нет</td><td>Нет</td><td>Гибридная</td><td>26 910 ₽</td></tr>
+                <tr><td>Switch Lite</td><td>2019</td><td>4x Cortex-A57</td><td>256 CUDA</td><td>4 GB</td><td>32 GB</td><td>720p</td><td>Нет</td><td>Нет</td><td>Портативная</td><td>17 910 ₽</td></tr>
+                <tr><td>Switch OLED</td><td>2021</td><td>4x Cortex-A57</td><td>256 CUDA</td><td>4 GB</td><td>64 GB</td><td>1080p</td><td>Нет</td><td>Нет</td><td>OLED экран</td><td>31 410 ₽</td></tr>
+                <tr><td>3DS</td><td>2011</td><td>268 MHz ARM11</td><td>PICA200</td><td>128 MB</td><td>2 GB</td><td>800×240</td><td>Нет</td><td>DS</td><td>3D без очков</td><td>22 410 ₽</td></tr>
+            </tbody>
+        </table>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const searchInput = document.getElementById('searchInput');
+            const tableBody = document.querySelector('#mainTable tbody');
+            const allRows = Array.from(tableBody.querySelectorAll('tr'));
+            let originalOrder = [...allRows];
+
+            function highlightMatches(text, search) {
+                const regex = new RegExp(`(${search})`, 'gi');
+                return text.replace(regex, '<span style="color: var(--main-color); font-weight: bold;">$1</span>');
+            }
+
+            function searchHandler() {
+                const searchText = searchInput.value.trim().toLowerCase();
+                const fragment = document.createDocumentFragment();
+                let highlightedRows = [];
+
+                // Создаем временный контейнер для сортировки
+                const tempContainer = document.createElement('div');
+                
+                // Восстанавливаем исходный порядок
+                originalOrder.forEach(row => {
+                    row.classList.remove('highlight');
+                    Array.from(row.cells).forEach(cell => {
+                        cell.innerHTML = cell.textContent;
+                    });
+                    tempContainer.appendChild(row.cloneNode(true));
+                });
+
+                // Фильтрация и подсветка
+                if (searchText) {
+                    tempContainer.querySelectorAll('tr').forEach(row => {
+                        const rowText = row.textContent.toLowerCase();
+                        if (rowText.includes(searchText)) {
+                            Array.from(row.cells).forEach(cell => {
+                                cell.innerHTML = highlightMatches(cell.textContent, searchText);
+                            });
+                            row.classList.add('highlight');
+                            highlightedRows.push(row);
+                        }
+                    });
+
+                    // Сначала добавляем найденные результаты
+                    highlightedRows.forEach(row => fragment.appendChild(row));
+                    
+                    // Затем остальные строки
+                    tempContainer.querySelectorAll('tr').forEach(row => {
+                        if (!row.classList.contains('highlight')) {
+                            fragment.appendChild(row);
+                        }
+                    });
+                } else {
+                    // Возвращаем исходный порядок
+                    originalOrder.forEach(row => fragment.appendChild(row));
+                }
+
+                // Очищаем и перестраиваем таблицу
+                tableBody.innerHTML = '';
+                tableBody.appendChild(fragment);
+            }
+
+            // Сохраняем исходный порядок строк
+            originalOrder = [...tableBody.querySelectorAll('tr')];
+
+            searchInput.addEventListener('input', searchHandler);
+        });
+    </script>
+    <footer>
+        <p>Все материалы, ссылки, IP, товарные знаки использованы исключительно в образовательных целях, без какой либо выгоды включая экономической. Материалы, ссылки, IP, товарные знаки не предпологаются использованием третьими лицами для реализации своих проектов включая образовательных!</p>
+    </footer>
+</body>
+</html>

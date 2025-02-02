@@ -1,0 +1,234 @@
+/* Основные стили для страницы Xbox */
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #121212; /* Темный фон */
+    color: #e0e0e0; /* Светлый текст */
+    margin: 0;
+    padding: 0;
+}
+/* Шапка */
+header {
+    background-color: #0050d4; /* Синий PlayStation */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 36px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+/* Заголовки */
+header {
+    background-color: #107C10; /* Xbox-зеленый */
+    color: white;
+    padding: 20px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 2.5em;
+}
+
+/* Меню навигации */
+nav {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    padding: 10px 0;
+}
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #ffffff; /* Белый текст */
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    gap: 15px;
+}
+
+nav ul li {
+    margin: 0;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #e0e0e0;
+    padding: 10px 20px;
+    border-radius: 5px;
+    transition: 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #107C10;
+    color: white;
+}
+
+/* Стили для изображений */
+img {
+    max-width: 100%; /* Изображения занимают максимум ширины контейнера */
+    max-height: 300px; /* Ограничение высоты */
+    object-fit: cover; /* Сохранение пропорций */
+    border-radius: 10px; /* Скругленные края */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Добавление тени */
+    margin: 20px 0; /* Отступ сверху и снизу */
+}
+
+/* Секция консолей */
+section {
+    padding: 20px;
+    margin: 20px auto;
+    max-width: 1200px;
+    background-color: #1f1f1f;
+    border-radius: 15px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+section h2 {
+    color: #107C10; /* Xbox-зеленый для заголовков */
+    font-size: 2em;
+    border-bottom: 2px solid #107C10;
+    padding-bottom: 10px;
+    margin-bottom: 20px;
+}
+
+section p {
+    line-height: 1.6;
+    font-size: 1.1em;
+}
+
+/* Таблицы для характеристик */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin: 20px 0;
+}
+
+table, th, td {
+    border: 1px solid #3a3a3a;
+}
+
+th, td {
+    padding: 10px;
+    text-align: left;
+}
+
+th {
+    background-color: #107C10; /* Xbox-зеленый */
+    color: white;
+}
+
+td {
+    background-color: #1f1f1f;
+}
+
+tr:hover {
+    background-color: #2a2a2a;
+}
+
+/* Кнопки */
+button {
+    background-color: #107C10;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1em;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background-color: #0e6c0e;
+}
+
+/* Подвал */
+footer {
+    text-align: center;
+    padding: 10px;
+    background-color: #1a1a1a;
+    color: #e0e0e0;
+    font-size: 0.9em;
+    margin-top: 20px;
+}
+
+/* Стиль кнопки "Наверх" */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #107C10, #107C10);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Эффект при наведении */
+.back-to-top:hover {
+    background: linear-gradient(45deg, #02ff56, #03ff24);
+    transform: scale(1.1); /* Легкое увеличение */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Анимация появления кнопки */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация исчезновения кнопки */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Стили для изображений */
+img {
+    max-width: 100%; /* Изображение не выходит за пределы контейнера */
+    max-height: 300px; /* Ограничение высоты */
+    object-fit: cover; /* Сохранение пропорций */
+    border-radius: 10px; /* Скругленные края для эстетики */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для акцента */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}

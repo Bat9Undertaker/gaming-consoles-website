@@ -1,0 +1,310 @@
+/* Общий стиль */
+body {
+    font-family: 'Poppins', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(135deg, #0d1a3c, #1a2b4c);
+    color: #ffffff;
+}
+
+header {
+    text-align: center;
+    background: #1a2b4c;
+    padding: 20px 0;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5);
+}
+
+header h1 {
+    font-size: 2.5em;
+    margin: 0;
+    color: #ff6f61;
+}
+
+header nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 1.2em;
+    transition: color 0.3s ease;
+}
+
+header nav a:hover {
+    color: #ff6f61;
+}
+
+/* Интро секция */
+#intro {
+    text-align: center;
+    padding: 100px 20px;
+    background: linear-gradient(135deg, #1a2b4c, #0d1a3c);
+    color: #ffffff;
+}
+
+#intro h2 {
+    font-size: 2.2em;
+    margin-bottom: 20px;
+}
+
+#intro p {
+    font-size: 1.2em;
+    margin-bottom: 30px;
+}
+
+#intro .btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background: #ff6f61;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1.2em;
+    border-radius: 30px;
+    transition: background 0.3s ease;
+}
+
+#intro .btn:hover {
+    background: #ff3f31;
+}
+
+/* Секции категорий */
+.category {
+    padding: 50px 20px;
+    text-align: center;
+}
+
+.category h2 {
+    font-size: 2em;
+    color: #ff6f61;
+}
+
+.category img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 10px;
+    margin: 20px 0;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.6);
+}
+
+.category p {
+    font-size: 1.1em;
+    margin-bottom: 20px;
+}
+
+.category .btn {
+    display: inline-block;
+    padding: 10px 20px;
+    background: #1a2b4c;
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+    border-radius: 20px;
+    transition: background 0.3s ease;
+}
+
+.category .btn:hover {
+    background: #ff6f61;
+}
+
+/* Футер */
+footer {
+    background: #0d1a3c;
+    padding: 20px 0;
+    text-align: center;
+}
+
+footer p {
+    margin: 0;
+    font-size: 1em;
+}
+
+footer nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 10px 0 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+footer nav a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 1em;
+}
+
+footer nav a:hover {
+    color: #ff6f61;
+}/* Общие стили */
+body {
+  margin: 0;
+  font-family: 'Arial', sans-serif;
+  background: linear-gradient(90deg, #1e1e2f, #1a1a28);
+  color: #fff;
+  line-height: 1.6;
+}
+
+.container {
+  width: 90%;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Шапка */
+.header {
+  background: #222;
+  padding: 20px 0;
+}
+
+.logo {
+  color: #fff;
+  font-size: 28px;
+  text-transform: uppercase;
+}
+
+.navbar {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-link {
+  color: #fff;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s;
+}
+
+.nav-link:hover {
+  color: #007bff;
+}
+
+.nav-link.active {
+  color: #00bfff;
+}
+
+/* Герой */
+.hero {
+  text-align: center;
+  padding: 60px 0;
+  background: url('images/hero-bg.jpg') no-repeat center/cover;
+}
+
+.hero-title {
+  font-size: 48px;
+  margin-bottom: 20px;
+}
+
+.hero-text {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.btn-primary {
+  background: #007bff;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  font-size: 18px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn-primary:hover {
+  background: #0056b3;
+}
+
+/* Консоли */
+.featured {
+  padding: 40px 0;
+}
+
+.section-title {
+  text-align: center;
+  font-size: 32px;
+  margin-bottom: 40px;
+}
+
+.console-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 20px;
+}
+
+.console-card {
+  background: #333;
+  padding: 20px;
+  border-radius: 10px;
+  text-align: center;
+  transition: transform 0.3s, background 0.3s;
+}
+
+.console-card:hover {
+  transform: scale(1.05);
+  background: #444;
+}
+
+.console-img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 10px;
+}
+
+.console-title {
+  font-size: 24px;
+  margin: 20px 0 10px;
+}
+
+.console-text {
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.btn-secondary {
+  background: #555;
+  color: #fff;
+  padding: 8px 16px;
+  text-decoration: none;
+  font-size: 16px;
+  border-radius: 5px;
+  transition: background 0.3s;
+}
+
+.btn-secondary:hover {
+  background: #777;
+}
+
+/* Подвал */
+.footer {
+  text-align: center;
+  padding: 20px 0;
+  background: #222;
+}
+
+.footer-text {
+  font-size: 14px;
+  color: #aaa;
+}
+
+/* Стили для изображений */
+img {
+    max-width: 100%; /* Изображение не выходит за пределы контейнера */
+    max-height: 300px; /* Ограничение высоты */
+    object-fit: cover; /* Сохранение пропорций */
+    border-radius: 10px; /* Скругленные края для эстетики */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для акцента */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}

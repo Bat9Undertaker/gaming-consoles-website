@@ -1,0 +1,199 @@
+/* Основной стиль страницы */
+body {
+    background: linear-gradient(180deg, #1a1a1a, #0d0d0d); /* Темный градиентный фон */
+    color: #f5f5f5; /* Светлый текст */
+    font-family: 'Poppins', sans-serif; /* Современный шрифт */
+    margin: 0;
+    padding: 0;
+}
+
+/* Шапка сайта */
+header {
+    background-color: #ff4c4c; /* Красный фон */
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+    font-size: 32px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5); /* Тень */
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+/* Навигационное меню */
+nav {
+    background-color: #0d0d0d; /* Темно-серый */
+    padding: 10px 0;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+}
+
+nav ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+nav ul li a {
+    color: #ffffff; /* Белый текст */
+    text-decoration: none;
+    padding: 10px 20px;
+    font-size: 18px;
+    border-radius: 5px;
+    font-weight: 500;
+    transition: all 0.3s ease;
+}
+
+nav ul li a:hover {
+    background-color: #0078ff; /* Синий фон */
+    color: #ffffff;
+}
+
+nav ul li a.active {
+    background-color: #ff4c4c; /* Красный активный элемент */
+}
+
+/* Основной контент */
+main {
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: #1a1a1a; /* Темно-серый фон */
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Тень */
+}
+
+/* Заголовки */
+h2 {
+    color: #ff4c4c; /* Красный акцент */
+    font-size: 28px;
+    margin-bottom: 15px;
+    border-bottom: 2px solid #0078ff; /* Синяя линия */
+    padding-bottom: 5px;
+}
+
+/* Таблица характеристик */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+    background-color: #0d0d0d; /* Темный фон */
+    border-radius: 8px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+
+table th,
+table td {
+    padding: 15px;
+    text-align: left;
+    color: #f5f5f5; /* Светлый текст */
+}
+
+table th {
+    background-color: #ff4c4c; /* Красный заголовок */
+    text-transform: uppercase;
+    font-weight: bold;
+}
+
+table tr:nth-child(even) {
+    background-color: #1a1a1a; /* Чередование строк */
+}
+
+table tr:hover {
+    background-color: #0078ff; /* Подсветка строки при наведении */
+}
+
+/* Кнопки */
+button {
+    display: inline-block;
+    background-color: #ff4c4c;
+    color: #ffffff;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-weight: bold;
+}
+
+button:hover {
+    background-color: #0078ff; /* Синий при наведении */
+}
+
+/* Адаптивность */
+@media (max-width: 768px) {
+    nav ul {
+        flex-direction: column;
+    }
+
+    table {
+        font-size: 14px;
+    }
+}
+
+/* Стиль кнопки "Наверх" */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background: linear-gradient(45deg, #ff0000, #ff0000);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    width: 60px;
+    height: 60px;
+    font-size: 24px;
+    font-weight: bold;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
+    transition: all 0.3s ease-in-out;
+    z-index: 1000;
+}
+
+/* Эффект при наведении */
+.back-to-top:hover {
+    background: linear-gradient(45deg, #ff0202, #ff0000);
+    transform: scale(1.1); /* Легкое увеличение */
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.4);
+}
+
+/* Анимация появления кнопки */
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Анимация исчезновения кнопки */
+@keyframes fadeOut {
+    from {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    to {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+}
+
+/* Стили для изображений */
+img {
+    max-width: 100%; /* Изображение не выходит за пределы контейнера */
+    max-height: 300px; /* Ограничение высоты */
+    object-fit: cover; /* Сохранение пропорций */
+    border-radius: 10px; /* Скругленные края для эстетики */
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для акцента */
+    margin: 20px 0; /* Отступы сверху и снизу */
+}
