@@ -197,3 +197,24 @@ img {
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Тень для акцента */
     margin: 20px 0; /* Отступы сверху и снизу */
 }
+
+/* Адаптивность для телефонов */
+@media (max-width: 768px) {
+    #scrollToTopBtn {
+        width: 40px;
+        height: 40px;
+        font-size: 20px;
+        bottom: 15px;
+        right: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    #scrollToTopBtn {
+        width: 35px;
+        height: 35px;
+        font-size: 18px;
+        bottom: 10px;
+        right: 10px;
+    }
+}
