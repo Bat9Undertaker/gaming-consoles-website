@@ -42,3 +42,52 @@ main {
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.6); /* Тень */
 }
+
+@media (max-width: 768px) {
+  .comparison-table {
+    width: 100%;
+    overflow-x: auto;
+    display: block;
+  }
+  
+  /* Вертикальное отображение строк */
+  .comparison-row {
+    display: flex;
+    flex-wrap: wrap;
+  }
+
+  /* Стили для карточек товаров */
+  .product-column {
+    width: 100%;
+    margin-bottom: 20px;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    padding: 15px;
+  }
+
+  /* Скрытие заголовков столбцов */
+  .table-header {
+    display: none;
+  }
+
+  /* Отображение параметров как подписей */
+  .comparison-attribute::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+    margin-bottom: 5px;
+  }
+
+  /* Адаптивные изображения */
+  .product-image {
+    max-width: 200px;
+    height: auto;
+    margin: 0 auto;
+  }
+
+  /* Увеличение элементов управления */
+  .compare-button {
+    padding: 12px 24px;
+    font-size: 16px;
+  }
+}
